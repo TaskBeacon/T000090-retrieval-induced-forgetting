@@ -1,0 +1,22 @@
+id: T000090
+slug: retrieval-induced-forgetting
+title: Retrieval-Induced Forgetting
+variant: baseline
+license: MIT
+maturity: smoke_tested
+version:
+  release_tag: v0.1.0
+contracts:
+  taps: v0.2.0
+runtime:
+  profile: psyflow
+  entrypoint: main.py
+acquisition: behavior
+language: Chinese
+canonical: true
+evidence:
+  - https://doi.org/10.1037/0278-7393.20.5.1063
+  - https://doi.org/10.3758/BF03214366
+  - https://doi.org/10.1038/nn.3973
+maintainer:
+  - TaskBeacon

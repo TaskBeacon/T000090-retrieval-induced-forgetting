@@ -1,0 +1,53 @@
+[
+  {
+    "id": "W2043527309",
+    "title": "Remembering can cause forgetting: Retrieval dynamics in long-term memory",
+    "authors": ["Michael C. Anderson", "Robert A. Bjork", "Elizabeth Ligon Bjork"],
+    "year": 1994,
+    "journal": "Journal of Experimental Psychology: Learning, Memory, and Cognition",
+    "doi_or_url": "https://doi.org/10.1037/0278-7393.20.5.1063",
+    "citation_count": 1462,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": ["canonical_workflow", "study_timing", "retrieval_practice_timing", "retention_interval", "rp_item_definitions"],
+    "parameter_bindings": {
+      "task.category_count": 8,
+      "task.items_per_category": 6,
+      "task.practiced_category_count": 4,
+      "task.practiced_items_per_category": 3,
+      "task.practice_repetitions": 3,
+      "timing.study_duration_s": 5.0,
+      "timing.practice_response_window_s": 10.0,
+      "timing.retention_interval_s": 1200.0
+    },
+    "notes": "Author-hosted full text is archived locally under references/source_papers. OpenAlex citation count checked 2026-08-23."
+  },
+  {
+    "id": "W2054727733",
+    "title": "Retrieval-induced forgetting: Evidence for a recall-specific mechanism",
+    "authors": ["Michael C. Anderson", "Elizabeth Ligon Bjork", "Robert A. Bjork"],
+    "year": 2000,
+    "journal": "Psychonomic Bulletin & Review",
+    "doi_or_url": "https://doi.org/10.3758/BF03214366",
+    "citation_count": 430,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": ["competitive_retrieval_logic", "category_stem_cues", "itemwise_final_cued_recall", "final_test_timing"],
+    "parameter_bindings": {"timing.final_test_response_window_s": 7.0},
+    "notes": "Author-hosted full text is archived locally under references/source_papers. OpenAlex citation count checked 2026-08-23."
+  },
+  {
+    "id": "W1977249777",
+    "title": "Retrieval induces adaptive forgetting of competing memories via cortical pattern suppression",
+    "authors": ["Maria Wimber", "Arjen Alink", "Ian Charest", "Nikolaus Kriegeskorte", "Michael C. Anderson"],
+    "year": 2015,
+    "journal": "Nature Neuroscience",
+    "doi_or_url": "https://doi.org/10.1038/nn.3973",
+    "citation_count": 314,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": ["construct_validity", "adaptive_forgetting_mechanism", "competing_memory_suppression"],
+    "parameter_bindings": {},
+    "notes": "Green open-access manuscript available as PMCID PMC4394359. OpenAlex citation count checked 2026-08-23."
+  }
+]

@@ -1,0 +1,311 @@
+subinfo_fields:
+  - name: subject_id
+    type: int
+    constraints:
+      min: 101
+      max: 999
+      digits: 3
+
+subinfo_mapping:
+  subject_id: 被试编号（三位数字）
+  Participant Information: 被试信息
+  registration_failed: 登记失败
+  registration_successful: 登记成功
+  invalid_input: "{field} 输入无效"
+
+window:
+  size: [1280, 720]
+  units: pix
+  screen: 0
+  bg_color: white
+  fullscreen: false
+  monitor_width_cm: 35.5
+  monitor_distance_cm: 60
+
+task:
+  task_name: retrieval_induced_forgetting
+  task_version: 0.1.0
+  save_path: ./outputs/sim_sampler
+  language: Chinese
+  voice_name: zh-CN-YunyangNeural
+  voice_enabled: false
+  seed_mode: same_within_sub
+  overall_seed: 90090
+  total_blocks: 4
+  total_trials: 40
+  trial_per_block: 10
+  trials_per_block: 10
+  delta: 0.0
+  conditions: [rp_plus, rp_minus, nrp]
+  condition_weights: null
+  continue_key: space
+  submit_key: return
+  key_list: [space, return, f, j]
+  category_count: 4
+  items_per_category: 4
+  practiced_category_count: 2
+  practiced_items_per_category: 2
+  practice_repetitions: 1
+  distractor_trials: 4
+  distractor_keys:
+    odd: f
+    even: j
+  cognitive_domain: [memory, episodic_memory, retrieval_inhibition]
+  variant: baseline
+  category_bank:
+    水果: [苹果, 香蕉, 橙子, 葡萄, 西瓜, 梨子]
+    动物: [老虎, 狮子, 大象, 猴子, 斑马, 熊猫]
+    乐器: [钢琴, 小提琴, 吉他, 长笛, 鼓, 琵琶]
+    颜色: [红色, 蓝色, 绿色, 黄色, 紫色, 黑色]
+    职业: [医生, 教师, 律师, 厨师, 记者, 警察]
+    家具: [桌子, 椅子, 沙发, 床铺, 衣柜, 书架]
+    交通工具: [汽车, 火车, 飞机, 轮船, 自行车, 地铁]
+    工具: [锤子, 锯子, 扳手, 螺丝刀, 钳子, 尺子]
+
+timing:
+  study_duration_s: 0.10
+  practice_response_window_s: 0.20
+  distractor_trial_duration_s: 0.20
+  final_test_response_window_s: 0.15
+
+stimuli:
+  instruction_text:
+    type: text
+    font: SimHei
+    text: |-
+      这是一项词语记忆任务，共分四个阶段。
+
+      先学习“类别—词语”配对；随后根据类别和首字线索回忆部分词语；
+      完成一段算术奇偶判断后，将对全部词语进行最终回忆。
+
+      回忆时请在输入框中键入完整词语，并按回车提交。
+      请认真作答，不要使用纸笔记录。
+
+      按空格键开始。
+    color: black
+    height: 28
+    wrapWidth: 1040
+    pos: [0, 0]
+  study_instruction_text:
+    type: text
+    font: SimHei
+    text: |-
+      第一阶段：学习
+
+      屏幕将依次呈现一个类别及其所属词语。
+      请思考词语与类别的关系，并记住每一组配对。
+
+      按空格键开始学习。
+    color: black
+    height: 30
+    wrapWidth: 1000
+    pos: [0, 0]
+  practice_instruction_text:
+    type: text
+    font: SimHei
+    text: |-
+      第二阶段：提取练习
+
+      屏幕将呈现类别和词语首字线索。
+      请回忆刚才学习过的完整词语，在输入框中键入后按回车提交。
+      每题最多 10 秒。
+
+      按空格键开始练习。
+    color: black
+    height: 30
+    wrapWidth: 1000
+    pos: [0, 0]
+  distractor_instruction_text:
+    type: text
+    font: SimHei
+    text: |-
+      第三阶段：算术判断
+
+      判断等式结果是奇数还是偶数：
+      按 F 选择“奇数”，按 J 选择“偶数”。
+      每题固定呈现 10 秒，请持续专注作答。
+
+      按空格键开始。
+    color: black
+    height: 30
+    wrapWidth: 1000
+    pos: [0, 0]
+  final_test_instruction_text:
+    type: text
+    font: SimHei
+    text: |-
+      第四阶段：最终回忆
+
+      现在将测试所有学过的词语。
+      根据类别和首字线索，在输入框中键入完整词语并按回车提交。
+      每题最多 7 秒；请只填写学习阶段出现过的词语。
+
+      按空格键开始最终测试。
+    color: black
+    height: 30
+    wrapWidth: 1000
+    pos: [0, 0]
+  study_category_text:
+    type: text
+    font: SimHei
+    text: "类别：{category}"
+    color: "#374151"
+    height: 34
+    wrapWidth: 900
+    pos: [0, 100]
+  study_exemplar_text:
+    type: text
+    font: SimHei
+    text: "{exemplar}"
+    color: black
+    height: 48
+    wrapWidth: 900
+    pos: [0, -20]
+  practice_phase_label:
+    type: text
+    font: SimHei
+    text: "提取练习"
+    color: "#1D4ED8"
+    height: 28
+    wrapWidth: 900
+    pos: [0, 220]
+  final_test_phase_label:
+    type: text
+    font: SimHei
+    text: "最终回忆"
+    color: "#7C3AED"
+    height: 28
+    wrapWidth: 900
+    pos: [0, 220]
+  cue_category_text:
+    type: text
+    font: SimHei
+    text: "类别：{category}"
+    color: "#374151"
+    height: 34
+    wrapWidth: 900
+    pos: [0, 115]
+  cue_stem_text:
+    type: text
+    font: SimHei
+    text: "词语线索：{cue}"
+    color: black
+    height: 42
+    wrapWidth: 900
+    pos: [0, 25]
+  response_entry:
+    type: textbox
+    text: ""
+    font: SimHei
+    letterHeight: 34
+    size: [620, 76]
+    pos: [0, -95]
+    color: black
+    borderColor: "#6B7280"
+    fillColor: "#F9FAFB"
+    borderWidth: 2
+    alignment: center
+    anchor: center
+    editable: true
+  submit_hint_text:
+    type: text
+    font: SimHei
+    text: "输入完成后按回车提交"
+    color: "#4B5563"
+    height: 24
+    wrapWidth: 900
+    pos: [0, -210]
+  distractor_problem_text:
+    type: text
+    font: SimHei
+    text: "{problem}"
+    color: black
+    height: 54
+    wrapWidth: 900
+    pos: [0, 80]
+  distractor_left_label:
+    type: text
+    font: SimHei
+    text: "F　奇数"
+    color: "#1D4ED8"
+    height: 30
+    wrapWidth: 300
+    pos: [-250, -130]
+  distractor_right_label:
+    type: text
+    font: SimHei
+    text: "J　偶数"
+    color: "#7C3AED"
+    height: 30
+    wrapWidth: 300
+    pos: [250, -130]
+  good_bye_text:
+    type: text
+    font: SimHei
+    text: |-
+      任务完成
+
+      练习项目（Rp+）正确率：{rp_plus_accuracy}
+      同类未练习项目（Rp-）正确率：{rp_minus_accuracy}
+      未练习类别项目（Nrp）正确率：{nrp_accuracy}
+
+      练习促进分数：{facilitation_score}
+      提取诱发遗忘分数：{rif_score}
+      最终测试超时：{timeouts}
+
+      按空格键退出。
+    color: black
+    height: 27
+    wrapWidth: 1040
+    pos: [0, 0]
+
+triggers:
+  map:
+    exp_onset: 1
+    exp_end: 2
+    block_onset: 3
+    block_end: 4
+    study_instruction_onset: 10
+    study_onset: 11
+    practice_instruction_onset: 20
+    practice_onset: 21
+    distractor_instruction_onset: 30
+    distractor_onset: 31
+    final_test_instruction_onset: 40
+    final_rp_plus_onset: 41
+    final_rp_minus_onset: 42
+    final_nrp_onset: 43
+    text_submit: 51
+    distractor_f: 52
+    distractor_j: 53
+    response_timeout: 59
+    good_bye_onset: 60
+  driver:
+    type: serial_url
+    url: loop://
+    baudrate: 115200
+    timeout: 1
+    prefix: [1, 225, 1, 0]
+  policy:
+    strict: false
+  timing:
+    post_delay_s: 0.001
+
+sim:
+  output_dir: outputs/sim_sampler
+  seed: 90091
+  participant_id: sampler090
+  session_id: sub-sampler090_task-retrieval-induced-forgetting_seed90091
+  log_path: outputs/sim_sampler/sub-sampler090_task-retrieval-induced-forgetting_seed90091_sim_events.jsonl
+  policy: warn
+  default_rt_s: 0.05
+  clamp_rt: true
+  enable_scaling: true
+  timing_scale: 0.05
+  min_frames: 1
+  responder:
+    type: responders.task_sampler:TaskSamplerResponder
+    kwargs:
+      hit_rate: 0.8
+      rt_mean_s: 0.05
+      rt_sd_s: 0.01
