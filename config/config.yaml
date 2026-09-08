@@ -281,11 +281,8 @@ triggers:
     response_timeout: 59
     good_bye_onset: 60
   driver:
-    type: serial_url
-    url: loop://
-    baudrate: 115200
-    timeout: 1
-    prefix: [1, 225, 1, 0]
+    type: mock
+    print_codes: true
   policy:
     strict: false
   timing:
